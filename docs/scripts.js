@@ -109,7 +109,7 @@ function createSLCards(selectedHue) {
   lightnessInputName.innerHTML = "LIGHTNESS:";
 
   var saturationInput = document.createElement('input');
-  saturationInput.setAttribute("type", "number");
+  saturationInput.setAttribute("type", "range");
   saturationInput.setAttribute("value", "4");
   saturationInput.setAttribute("min", "1");
   saturationInput.setAttribute("max", "12");
@@ -118,7 +118,7 @@ function createSLCards(selectedHue) {
   saturationInput.classList.add("header-item", "divider");
 
   var lightnessInput = document.createElement('input');
-  lightnessInput.setAttribute("type", "number");
+  lightnessInput.setAttribute("type", "range");
   lightnessInput.setAttribute("value", "4");
   lightnessInput.setAttribute("min", "1");
   lightnessInput.setAttribute("max", "12");
@@ -155,7 +155,7 @@ function createSLCards(selectedHue) {
 
 function fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId) {
   addLightnessRows();
-  saturationInput.addEventListener("change", function() {
+  saturationInput.addEventListener("input", function() {
     if (parseInt(saturationInput.value) <= parseInt(saturationInput.max)) {
       addLightnessRows();
     } else {
@@ -164,7 +164,7 @@ function fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId)
     }
   });
 
-  lightnessInput.addEventListener("change", function() {
+  lightnessInput.addEventListener("input", function() {
     if (parseInt(lightnessInput.value) <= parseInt(lightnessInput.max)) {
       addLightnessRows();
     } else {
