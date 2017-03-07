@@ -129,7 +129,7 @@ function createSLCards(selectedHue) {
 
   var saturationInput = document.createElement('input');
   saturationInput.setAttribute("type", "range");
-  saturationInput.setAttribute("value", "4");
+  saturationInput.setAttribute("value", "5");
   saturationInput.setAttribute("min", "1");
   saturationInput.setAttribute("max", "12");
   saturationInput.setAttribute("size", "2");
@@ -142,7 +142,7 @@ function createSLCards(selectedHue) {
 
   var lightnessInput = document.createElement('input');
   lightnessInput.setAttribute("type", "range");
-  lightnessInput.setAttribute("value", "4");
+  lightnessInput.setAttribute("value", "5");
   lightnessInput.setAttribute("min", "1");
   lightnessInput.setAttribute("max", "12");
   lightnessInput.setAttribute("size", "2");

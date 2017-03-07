@@ -55,7 +55,10 @@ h6 {
 
 p,
 a {
-  font-size: .875em;
+  font-size: 1em;
+  color: inherit;
+  text-decoration: none;
+  text-transform: none;
 }
 
 input {
@@ -172,7 +175,8 @@ GLOBALS
 .page-wrap {
   width: 100%;
   max-width: 75rem;
-  margin: 3rem auto 10rem auto;
+  margin: 3rem auto 12rem auto;
+  min-height: calc(100vh - 8rem);
 }
 
 #primary {
@@ -243,17 +247,17 @@ h2.header-item {
 .close-card:hover {
   cursor: pointer;
   transform: scale(1.25);
-  transition: .1s ease-in-out;
+  transition: .1s ease-in;
 }
 
 .close-card:active {
-  transform: scale(1);
-  transition: .1s ease-in-out;
+  transform: scale(.875);
+  transition: .1s ease-in;
 }
 
 #secondary .swatch-container:after,
 #primary .card:after {
-  box-shadow: 0px 6px 100px 0px rgba(0, 0, 0, .8);
+  box-shadow: 0px 6px 100px 0px rgba(0, 0, 0, .75);
   content: "";
   position: absolute;
   top: 0;
@@ -458,5 +462,88 @@ SECONDARY
 @media screen and (min-width: 900px) {
   .sl-card {
     flex-basis: calc(50% - 1rem);
+  }
+}
+
+
+/**************************
+FOOTER
+**************************/
+
+#footer {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+#footer-content-wrap {
+  max-width: 75rem;
+  margin: auto;
+}
+
+#footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+#footer h3,
+#footer h4 {
+  line-height: 3rem;
+}
+
+#logo-1 {
+  color: HSL(0, 80%, 66%);
+}
+
+#logo-2 {
+  color: HSL(36, 80%, 66%);
+}
+
+#logo-3 {
+  color: HSL(72, 80%, 66%);
+}
+
+#logo-4 {
+  color: HSL(108, 80%, 66%);
+}
+
+#logo-5 {
+  color: HSL(144, 80%, 66%);
+}
+
+#logo-6 {
+  color: HSL(180, 80%, 66%);
+}
+
+#logo-7 {
+  color: HSL(180, 80%, 66%);
+}
+
+#logo-8 {
+  color: HSL(216, 80%, 66%);
+}
+
+#logo-9 {
+  color: HSL(252, 80%, 66%);
+}
+
+#logo-10 {
+  color: HSL(288, 80%, 66%);
+}
+
+#logo-11 {
+  color: HSL(324, 80%, 66%);
+}
+
+#signature {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 500px) {
+  #footer-flex {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 1.5rem 2rem 1.5rem;
   }
 }

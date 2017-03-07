@@ -1,2 +1,2 @@
-# Color-Grid
+# Color-Grids
 Color Palette App
