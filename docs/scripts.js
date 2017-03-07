@@ -94,11 +94,11 @@ function createSLCards(selectedHue) {
   var slInputWrap = document.createElement('span');
   slInputWrap.classList.add("sl-input-wrap");
 
-  var saturationInputWrap = document.createElement('span');
-  saturationInputWrap.classList.add("saturation-input-wrap");
+  var slInputWrap = document.createElement('span');
+  slInputWrap.classList.add("sl-input-wrap");
 
-  var lightnessInputWrap = document.createElement('span');
-  lightnessInputWrap.classList.add("lightness-input-wrap");
+  var slTitleWrap = document.createElement('span');
+  slTitleWrap.classList.add("sl-title-wrap");
 
   var saturationInputName = document.createElement('h6');
   saturationInputName.classList.add("header-item");
@@ -136,13 +136,12 @@ function createSLCards(selectedHue) {
   slSection.appendChild(newSLCard, slSection);
   newSLCard.appendChild(newCardTop, newSLCard);
   newCardTop.appendChild(slName, newCardTop);
+  newCardTop.appendChild(slTitleWrap, newCardTop);
   newCardTop.appendChild(slInputWrap, newCardTop);
-  slInputWrap.appendChild(saturationInputWrap, slInputWrap);
-  saturationInputWrap.appendChild(saturationInputName, saturationInputWrap);
-  saturationInputWrap.appendChild(saturationInput, saturationInputWrap);
-  slInputWrap.appendChild(lightnessInputWrap, slInputWrap);
-  lightnessInputWrap.appendChild(lightnessInputName, lightnessInputWrap);
-  lightnessInputWrap.appendChild(lightnessInput, lightnessInputWrap);
+  slTitleWrap.appendChild(saturationInputName, slTitleWrap);
+  slTitleWrap.appendChild(lightnessInputName, slTitleWrap);
+  slInputWrap.appendChild(saturationInput, slInputWrap);
+  slInputWrap.appendChild(lightnessInput, slInputWrap);
   newSLCard.appendChild(slCardBottom, newSLCard);
   addCloseButton(closeButtonContainer);
   slCardBottom.appendChild(newSLTable, slCardBottom);
