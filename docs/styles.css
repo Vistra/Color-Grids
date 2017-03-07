@@ -192,6 +192,7 @@ PRIMARY
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   margin-bottom: 3px;
+  padding: 3px 0;
 }
 
 .header-item {
@@ -207,23 +208,24 @@ h2.header-item {
   background-color: rgba(255, 255, 255, 0.05);
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
-  height: 22rem;
+  height: 24rem;
 }
 
 #hue-card-bottom {
   padding: 6px 3px 0px 3px;
   overflow-x: auto;
+  height: 20rem;
 }
 
 input.divider {
   max-width: 30rem;
-  height: 1em;
+  height: 1.5rem;
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   padding: 4px 2px;
   color: rgba(255, 255, 255, 0.8);
   border: none;
-  margin: 2px 0px 2px 1rem;
+  margin: 3px 0px 3px 1rem;
 }
 
 .hue-card .card-bottom {
