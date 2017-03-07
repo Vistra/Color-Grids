@@ -175,7 +175,7 @@ GLOBALS
 .page-wrap {
   width: 100%;
   max-width: 75rem;
-  margin: 3rem auto 12rem auto;
+  margin: 6rem auto 12rem auto;
   min-height: calc(100vh - 8rem);
 }
 
@@ -471,7 +471,6 @@ FOOTER
 **************************/
 
 #footer {
-  background: rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 
@@ -482,9 +481,9 @@ FOOTER
 
 #footer-flex {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  padding: 1rem 1.5rem 1rem 1.5rem;
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 #footer h3,
@@ -540,10 +539,11 @@ FOOTER
   color: rgba(255, 255, 255, 0.5);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 90000px) {
   #footer-flex {
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     padding: 1rem 1.5rem 2rem 1.5rem;
   }
 }
