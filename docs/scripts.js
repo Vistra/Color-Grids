@@ -7,7 +7,7 @@ init();
 
 function init() {
   loadHues();
-  hueNumber.addEventListener("change", function() {
+  hueNumber.addEventListener("input", function() {
     loadHues()
   });
 }
@@ -102,11 +102,11 @@ function createSLCards(selectedHue) {
 
   var saturationInputName = document.createElement('h6');
   saturationInputName.classList.add("header-item");
-  saturationInputName.innerHTML = "SATURATION:";
+  saturationInputName.innerHTML = "SATURATION";
 
   var lightnessInputName = document.createElement('h6');
   lightnessInputName.classList.add("header-item");
-  lightnessInputName.innerHTML = "LIGHTNESS:";
+  lightnessInputName.innerHTML = "LIGHTNESS";
 
   var saturationInput = document.createElement('input');
   saturationInput.setAttribute("type", "range");

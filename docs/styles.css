@@ -60,6 +60,108 @@ input {
 
 
 /**************************
+SCROLLBARS
+**************************/
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1.9rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: none;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: none;
+  border: none;
+  height: 1.6rem;
+  width: 1rem;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 2.2px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: none;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: none;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: none;
+  border: none;
+  height: 1.6rem;
+  width: 1rem;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 1rem;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: none;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: none;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+input[type=range]::-ms-thumb {
+  box-shadow: none;
+  border: none;
+  height: 1.6rem;
+  width: 1rem;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: none;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: none;
+}
+
+
+/**************************
 PRIMARY
 **************************/
 
@@ -114,14 +216,14 @@ h2.header-item {
 }
 
 input.divider {
+  max-width: 20rem;
   height: 1em;
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 3px;
-  padding: 4px 4px 4px 8px;
+  padding: 4px 2px;
   color: rgba(255, 255, 255, 0.8);
   border: none;
-  margin: 2px 0;
-  margin-right: 1rem;
+  margin: 2px 0px 2px 1rem;
 }
 
 .hue-card .card-bottom {
@@ -141,7 +243,6 @@ input.divider {
 
 .hue-card .card-bottom::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, .2);
-  outline: 1px solid red;
 }
 
 .hue-container {
@@ -207,10 +308,10 @@ SATURATION & LIGHTNESS
 .close-card {
   color: rgba(255, 255, 255, 0.5);
   font-size: 2.5rem;
-  padding: 0px 16px;
+  padding: 0px 2rem;
   margin: 0;
   -webkit-transition: -webkit-transform .33s ease-in-out;
-  transition: .33s ease-in-out;
+  transition: .1s ease-in-out;
   line-height: 1;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -220,7 +321,28 @@ SATURATION & LIGHTNESS
 
 .close-card:hover {
   cursor: pointer;
-  transform: rotate(-180deg);
+  animation-name: pulse;
+  animation-duration: .25s;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.25, 1.25, 1.25);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
 }
 
 .sl-card {
