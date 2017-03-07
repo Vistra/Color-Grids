@@ -295,6 +295,7 @@ SATURATION & LIGHTNESS
 }
 
 .sl-title-wrap {
+  height: 4.5rem;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
