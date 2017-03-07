@@ -194,7 +194,7 @@ GLOBALS
   border-top-right-radius: 4px;
   margin-bottom: 3px;
   padding: 2px 0px;
-  height: 4.32rem;
+  height: 4.5rem;
 }
 
 input.divider {
@@ -338,7 +338,7 @@ SATURATION & LIGHTNESS SECTION
   flex-direction: column;
   justify-content: space-around;
   margin-top: 2px;
-  height: 4.32rem;
+  height: 4.5rem;
 }
 
 .s-input-row,
