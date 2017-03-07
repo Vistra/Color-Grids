@@ -453,8 +453,8 @@ SECONDARY
 }
 
 @media screen and (max-width: 900px) {
-  html {
-    font-size: 18px;
+  body {
+    font-size: 1.2rem;
   }
   #secondary {
     justify-content: space-between;
