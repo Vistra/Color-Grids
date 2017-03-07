@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 20px;
 }
 
 body {
@@ -404,12 +404,6 @@ SATURATION & LIGHTNESS SECTION
   cursor: pointer;
 }
 
-@media screen and (min-width: 900px) {
-  .sl-card {
-    flex-basis: calc(50% - 1rem);
-  }
-}
-
 
 /**************************
 SECONDARY
@@ -453,13 +447,19 @@ SECONDARY
 }
 
 @media screen and (max-width: 900px) {
-  body {
-    font-size: 1.2rem;
-  }
   #secondary {
     justify-content: space-between;
   }
   #secondary .swatch-container {
     flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+  .sl-card {
+    flex-basis: calc(50% - 1rem);
   }
 }
