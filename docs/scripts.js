@@ -2,12 +2,14 @@
 
 var hueNumber = document.getElementById('hue-divider');
 
-
 init();
 
 function init() {
   loadHues();
+  var hueInputValue = document.getElementById('hue-input-value')
+  hueInputValue.innerHTML = hueNumber.value;
   hueNumber.addEventListener("input", function() {
+    hueInputValue.innerHTML = hueNumber.value;
     loadHues()
   });
 }
@@ -91,22 +93,39 @@ function createSLCards(selectedHue) {
   slName.classList.add("header-item");
   slName.style.color = "hsl(" + selectedHueId + ", 100%, 50%)";
 
-  var slInputWrap = document.createElement('span');
-  slInputWrap.classList.add("sl-input-wrap");
+  var slInputTable = document.createElement('div');
+  slInputTable.classList.add("sl-input-table");
 
-  var slInputWrap = document.createElement('span');
-  slInputWrap.classList.add("sl-input-wrap");
+  var sInputRow = document.createElement('div');
+  sInputRow.classList.add("s-input-row");
 
-  var slTitleWrap = document.createElement('span');
-  slTitleWrap.classList.add("sl-title-wrap");
+  var lInputRow = document.createElement('div');
+  lInputRow.classList.add("l-input-row");
+
+  var sTitleData = document.createElement('div');
+  sTitleData.classList.add("s-title-data");
+
+  var sInputData = document.createElement('div');
+  sInputData.classList.add("s-input-data");
+
+  var lTitleData = document.createElement('div');
+  lTitleData.classList.add("l-title-data");
+
+  var lInputData = document.createElement('div');
+  lInputData.classList.add("l-input-data");
 
   var saturationInputName = document.createElement('h6');
-  saturationInputName.classList.add("header-item");
   saturationInputName.innerHTML = "SATURATION";
 
   var lightnessInputName = document.createElement('h6');
-  lightnessInputName.classList.add("header-item");
   lightnessInputName.innerHTML = "LIGHTNESS";
+
+  var saturationInputValue = document.createElement('h5');
+  saturationInputValue.classList.add("s-input-value");
+
+  var lightnessInputValue = document.createElement('h5');
+  lightnessInputValue.classList.add("l-input-value");
+
 
   var saturationInput = document.createElement('input');
   saturationInput.setAttribute("type", "range");
@@ -116,6 +135,10 @@ function createSLCards(selectedHue) {
   saturationInput.setAttribute("size", "2");
   saturationInput.setAttribute("id", "saturation-input");
   saturationInput.classList.add("header-item", "divider");
+  saturationInputValue.innerHTML = saturationInput.value;
+  saturationInput.addEventListener("input", function() {
+    saturationInputValue.innerHTML = saturationInput.value;
+  });
 
   var lightnessInput = document.createElement('input');
   lightnessInput.setAttribute("type", "range");
@@ -125,6 +148,10 @@ function createSLCards(selectedHue) {
   lightnessInput.setAttribute("size", "2");
   lightnessInput.setAttribute("id", "lightness-input");
   lightnessInput.classList.add("header-item", "divider");
+  lightnessInputValue.innerHTML = lightnessInput.value;
+  lightnessInput.addEventListener("input", function() {
+    lightnessInputValue.innerHTML = lightnessInput.value;
+  });
 
   var slCardBottom = document.createElement('div');
   slCardBottom.classList.add('card-bottom');
@@ -136,12 +163,23 @@ function createSLCards(selectedHue) {
   slSection.appendChild(newSLCard, slSection);
   newSLCard.appendChild(newCardTop, newSLCard);
   newCardTop.appendChild(slName, newCardTop);
-  newCardTop.appendChild(slTitleWrap, newCardTop);
-  newCardTop.appendChild(slInputWrap, newCardTop);
-  slTitleWrap.appendChild(saturationInputName, slTitleWrap);
-  slTitleWrap.appendChild(lightnessInputName, slTitleWrap);
-  slInputWrap.appendChild(saturationInput, slInputWrap);
-  slInputWrap.appendChild(lightnessInput, slInputWrap);
+
+  newCardTop.appendChild(slInputTable, newCardTop);
+
+  slInputTable.appendChild(sInputRow, slInputTable);
+  sInputRow.appendChild(sTitleData, sInputRow);
+  sTitleData.appendChild(saturationInputName, sTitleData);
+  sInputRow.appendChild(sInputData, sInputRow);
+  sInputData.appendChild(saturationInput, sInputData);
+  sInputRow.appendChild(saturationInputValue, sInputRow);
+
+  slInputTable.appendChild(lInputRow, slInputTable);
+  lInputRow.appendChild(lTitleData, lInputRow);
+  lTitleData.appendChild(lightnessInputName, lTitleData);
+  lInputRow.appendChild(lInputData, lInputRow);
+  lInputData.appendChild(lightnessInput, lInputData);
+  lInputRow.appendChild(lightnessInputValue, lInputRow);
+
   newSLCard.appendChild(slCardBottom, newSLCard);
   addCloseButton(closeButtonContainer);
   slCardBottom.appendChild(newSLTable, slCardBottom);
@@ -149,8 +187,6 @@ function createSLCards(selectedHue) {
   slName.innerHTML = selectedHueId;
   fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId);
 }
-
-
 
 function fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId) {
   addLightnessRows();
