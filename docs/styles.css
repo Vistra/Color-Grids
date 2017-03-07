@@ -1,8 +1,12 @@
+html {
+  font-size: 14px;
+}
+
 body {
   font-family: "Roboto", Helvetica, sans-serif;
   color: #fff;
   background-color: rgb(26, 26, 26);
-  font-size: 14px;
+  font-size: 1rem;
   box-sizing: border-box;
   margin: 0;
 }
@@ -45,13 +49,13 @@ h5 {
 }
 
 h6 {
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: .875em;
+  line-height: 1.6;
 }
 
 p,
 a {
-  font-size: 1em;
+  font-size: .875em;
 }
 
 input {
@@ -323,8 +327,7 @@ HUE SECTION
 }
 
 .hue-container .hue-name {
-  font-size: .875em;
-  padding: .5rem 2px;
+  padding: .5rem 1.5px;
 }
 
 
@@ -450,6 +453,9 @@ SECONDARY
 }
 
 @media screen and (max-width: 900px) {
+  html {
+    font-size: 18px;
+  }
   #secondary {
     justify-content: space-between;
   }

@@ -48,7 +48,7 @@ function addHues(hueDivider, i) {
   newHue.style.backgroundColor = "hsl(" + (hueDivider * i) + ", 100%, 50%)";
   newHue.setAttribute('data', Math.round(hueDivider * i))
 
-  var newHueName = document.createElement("div");
+  var newHueName = document.createElement("h6");
   newHueName.classList.add("hue-name");
   newHueName.innerHTML = Math.round(hueDivider * i);
 
