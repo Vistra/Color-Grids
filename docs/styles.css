@@ -226,17 +226,6 @@ input.divider {
   margin: 2px 0px 2px 1rem;
 }
 
-.hue-card input.divider {
-  max-width: 30rem;
-  height: 1em;
-  background-color: rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  padding: 4px 2px;
-  color: rgba(255, 255, 255, 0.8);
-  border: none;
-  margin: 2px 0px 2px 1rem;
-}
-
 .hue-card .card-bottom {
   display: flex;
   align-items: center;
