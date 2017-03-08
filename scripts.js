@@ -1,6 +1,18 @@
 //Add hue-containers
 
-var hueNumber = document.getElementById('hue-divider');
+var hueNumber = document.getElementById("hue-divider");
+
+init();
+
+function init() {
+  loadHues();
+  var hueInputValue = document.getElementById("hue-input-value");
+  hueInputValue.innerHTML = hueNumber.value;
+  hueNumber.addEventListener("input", function() {
+    hueInputValue.innerHTML = hueNumber.value;
+    loadHues();
+  });
+}
 
 function loadHues() {
   if (parseInt(hueNumber.value) <= parseInt(hueNumber.max)) {
@@ -15,19 +27,6 @@ function loadHues() {
   }
 }
 
-function init() {
-  loadHues();
-  var hueInputValue = document.getElementById('hue-input-value');
-  hueInputValue.innerHTML = hueNumber.value;
-  hueNumber.addEventListener("input", function() {
-    hueInputValue.innerHTML = hueNumber.value;
-    loadHues();
-  });
-}
-
-init();
-
-
 function removeElements(className) {
   var elements = document.getElementsByClassName(className);
   while (elements.length > 0) {
@@ -40,11 +39,11 @@ function addHues(hueDivider, i) {
   hueContainer.classList.add("hue-container");
 
   var newHue = document.createElement("div");
-  newHue.setAttribute('id', Math.round(hueDivider * i))
+  newHue.setAttribute("id", Math.round(hueDivider * i));
   newHue.classList.add("hue");
   newHue.onclick = hueSelection;
   newHue.style.backgroundColor = "hsl(" + (hueDivider * i) + ", 100%, 50%)";
-  newHue.setAttribute('data', Math.round(hueDivider * i))
+  newHue.setAttribute("data", Math.round(hueDivider * i));
 
   var newHueName = document.createElement("h6");
   newHueName.classList.add("hue-name");
@@ -75,57 +74,57 @@ function removeSlCard(selectedHue) {
 }
 
 function createSLCards(selectedHue) {
-  var selectedHueId = selectedHue.getAttribute('id');
+  var selectedHueId = selectedHue.getAttribute("id");
 
-  var slSection = document.getElementById('sl-section');
+  var slSection = document.getElementById("sl-section");
 
-  var newSLCard = document.createElement('section');
+  var newSLCard = document.createElement("section");
   newSLCard.setAttribute("id", "sl-card-" + selectedHue.id);
   newSLCard.classList.add("card", "sl-card");
 
-  var newCardTop = document.createElement('div');
+  var newCardTop = document.createElement("div");
   var closeButtonContainer = newCardTop;
   newCardTop.classList.add("card-top");
 
-  var slName = document.createElement('h2');
+  var slName = document.createElement("h2");
   slName.classList.add("header-item");
   slName.style.color = "hsl(" + selectedHueId + ", 100%, 50%)";
 
-  var slInputTable = document.createElement('div');
+  var slInputTable = document.createElement("div");
   slInputTable.classList.add("sl-input-table");
 
-  var sInputRow = document.createElement('div');
+  var sInputRow = document.createElement("div");
   sInputRow.classList.add("s-input-row");
 
-  var lInputRow = document.createElement('div');
+  var lInputRow = document.createElement("div");
   lInputRow.classList.add("l-input-row");
 
-  var sTitleData = document.createElement('div');
+  var sTitleData = document.createElement("div");
   sTitleData.classList.add("s-title-data");
 
-  var sInputData = document.createElement('div');
+  var sInputData = document.createElement("div");
   sInputData.classList.add("s-input-data");
 
-  var lTitleData = document.createElement('div');
+  var lTitleData = document.createElement("div");
   lTitleData.classList.add("l-title-data");
 
-  var lInputData = document.createElement('div');
+  var lInputData = document.createElement("div");
   lInputData.classList.add("l-input-data");
 
-  var saturationInputName = document.createElement('h6');
+  var saturationInputName = document.createElement("h6");
   saturationInputName.innerHTML = "SATURATION";
 
-  var lightnessInputName = document.createElement('h6');
+  var lightnessInputName = document.createElement("h6");
   lightnessInputName.innerHTML = "LIGHTNESS";
 
-  var saturationInputValue = document.createElement('h5');
+  var saturationInputValue = document.createElement("h5");
   saturationInputValue.classList.add("s-input-value");
 
-  var lightnessInputValue = document.createElement('h5');
+  var lightnessInputValue = document.createElement("h5");
   lightnessInputValue.classList.add("l-input-value");
 
 
-  var saturationInput = document.createElement('input');
+  var saturationInput = document.createElement("input");
   saturationInput.setAttribute("type", "range");
   saturationInput.setAttribute("value", "4");
   saturationInput.setAttribute("min", "1");
@@ -138,7 +137,7 @@ function createSLCards(selectedHue) {
     saturationInputValue.innerHTML = saturationInput.value;
   });
 
-  var lightnessInput = document.createElement('input');
+  var lightnessInput = document.createElement("input");
   lightnessInput.setAttribute("type", "range");
   lightnessInput.setAttribute("value", "4");
   lightnessInput.setAttribute("min", "1");
@@ -151,11 +150,11 @@ function createSLCards(selectedHue) {
     lightnessInputValue.innerHTML = lightnessInput.value;
   });
 
-  var slCardBottom = document.createElement('div');
-  slCardBottom.classList.add('card-bottom');
+  var slCardBottom = document.createElement("div");
+  slCardBottom.classList.add("card-bottom");
 
-  var newSLTable = document.createElement('table');
-  newSLTable.classList.add('sl-table');
+  var newSLTable = document.createElement("table");
+  newSLTable.classList.add("sl-table");
   newSLTable.setAttribute("id", "slTable");
 
   slSection.appendChild(newSLCard, slSection);
@@ -207,9 +206,9 @@ function fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId)
   });
 
   function addLightnessRows() {
-    newSLTable.innerHTML = '';
-    for (var l = 0; l < parseInt(lightnessInput.value); l++) {
-      var lightnessRow = document.createElement('tr');
+    newSLTable.innerHTML = "";
+    for (var l = 0; l < parseInt(lightnessInput.value); l++) {;
+      var lightnessRow = document.createElement("tr");
       newSLTable.appendChild(lightnessRow, newSLTable);
       var lightnessValue = 100 - ((l + 1) * (100 / (parseInt(lightnessInput.value) + 1)));
 
@@ -218,7 +217,7 @@ function fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId)
 
       function addSaturationColumns() {
         for (var s = 0; s < parseInt(saturationInput.value); s++) {
-          var sl = document.createElement('td');
+          var sl = document.createElement("td");
           sl.classList.add("sl");
           sl.setAttribute("id", selectedHueId + "-" + saturationValue + "-" + lightnessValue);
           var saturationValue = ((s + 1) * (100 / parseInt(saturationInput.value)));
@@ -231,7 +230,7 @@ function fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId)
 }
 
 function slSelect() {
-  var selection = document.querySelectorAll('.sl');
+  var selection = document.querySelectorAll(".sl");
   for (var i = 0; i < selection.length; i++) {
     selection[i].addEventListener("click", toggleClass, false);
 
@@ -252,28 +251,28 @@ function toggleClass() {
 
 function createFinalPalette(selectedSl) {
 
-  var secondary = document.getElementById('secondary');
+  var secondary = document.getElementById("secondary");
 
-  var swatchContainer = document.createElement('div');
+  var swatchContainer = document.createElement("div");
   swatchContainer.classList.add("swatch-container");
-  swatchContainer.setAttribute("id", selectedSl.id + "-p")
+  swatchContainer.setAttribute("id", selectedSl.id + "-p");
 
-  var finalColorWrap = document.createElement('div');
+  var finalColorWrap = document.createElement("div");
   finalColorWrap.classList.add("final-color-wrap");
   finalColorWrap.style.backgroundColor = selectedSl.style.backgroundColor;
 
-  var finalColorMeta = document.createElement('div');
+  var finalColorMeta = document.createElement("div");
   finalColorMeta.classList.add("final-color-meta");
 
-  var finalColorHsl = document.createElement('h6');
+  var finalColorHsl = document.createElement("h6");
   finalColorHsl.classList.add("final-color-hsl");
   finalColorHsl.innerHTML = selectedSl.style.backgroundColor;
 
-  var finalColorRgb = document.createElement('h6');
+  var finalColorRgb = document.createElement("h6");
   finalColorRgb.classList.add("final-color-rgb");
   finalColorRgb.innerHTML = rgb2hsl(selectedSl.style.backgroundColor);
 
-  var finalColorHex = document.createElement('h6');
+  var finalColorHex = document.createElement("h6");
   finalColorHex.classList.add("final-color-hex");
   finalColorHex.innerHTML = rgb2hex(selectedSl.style.backgroundColor);
 
@@ -292,8 +291,8 @@ function removePalette(selectedSl) {
 }
 
 function addCloseButton(closeButtonContainer) {
-  var closeCardButton = document.createElement('div');
-  closeCardButton.addEventListener("click", deleteCard, false)
+  var closeCardButton = document.createElement("div");
+  closeCardButton.addEventListener("click", deleteCard, false);
   closeCardButton.classList.add("header-item", "close-card");
   closeCardButton.innerHTML = "×";
   closeButtonContainer.appendChild(closeCardButton, closeButtonContainer);
@@ -309,22 +308,22 @@ function deleteCard() {
 
 function deselectById(closeButtonTargetId) {
   if (closeButtonTargetId.includes("sl-card")) {
-    var deselectByIdId = closeButtonTargetId.replace('sl-card-', '');
+    var deselectByIdId = closeButtonTargetId.replace("sl-card-", "");
   } else if (closeButtonTargetId.includes("-p")) {
-    var deselectByIdId = closeButtonTargetId.replace("-p", '');
+    deselectByIdId = closeButtonTargetId.replace("-p", "");
   } else {
     return;
   }
 
   var deselectedElement = document.getElementById(deselectByIdId);
-  if (deselectedElement = document.getElementById(deselectByIdId)) {
-    deselectedElement.classList.remove('selected');
+  if (deselectedElement == document.getElementById(deselectByIdId)) {
+    deselectedElement.classList.remove("selected");
   } else { return; }
 }
 
 //Function to convert rgb color to hex format
 function rgb2hex(rgb) {
-  if (/^#[0-9A-F]{6}$/i.test(rgb)) return rgb;
+  if (/^#[0-9A-F]{6}$/i.test(rgb)) { return rgb; }
 
   rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
 
@@ -337,11 +336,12 @@ function rgb2hex(rgb) {
 //Function to convert rgb color to hsl format
 function rgb2hsl(rgb) {
   rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-  r = rgb[1];
-  g = rgb[2];
-  b = rgb[3];
+  var r = rgb[1];
+  var g = rgb[2];
+  var b = rgb[3];
 
   r /= 255, g /= 255, b /= 255;
+
   var max = Math.max(r, g, b),
     min = Math.min(r, g, b);
   var h, s, l = (max + min) / 2;

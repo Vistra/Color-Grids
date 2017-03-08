@@ -15,6 +15,14 @@
 		"oAP": "\/docs\/.gitignore",
 		"oF": 0
 		},
+	"\/.vscode\/settings.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/docs\/.vscode\/settings-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/docs": {
 		"ft": 65536,
 		"oA": 1,
@@ -148,7 +156,7 @@
 		"oA": 0,
 		"oAP": "\/docs\/scripts.js",
 		"oF": 2,
-		"sC": 1,
+		"sC": 0,
 		"tS": 0
 		}
 	},
@@ -1628,7 +1636,7 @@
 			"flagValue": -1
 			},
 		"latedef": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"laxbreak": {
@@ -1922,7 +1930,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 0,
-		"syntaxCheckerStyle": 1,
+		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {
