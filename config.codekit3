@@ -51,12 +51,25 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/sass\/_globals.sass": {
+	"\/sass\/_footer.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
-		"ft": 2,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/docs\/css\/_footer.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/sass\/_globals.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/docs\/css\/_globals.css",
@@ -64,12 +77,51 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/sass\/_typography.sass": {
+	"\/sass\/_hue_section.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
-		"ft": 2,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/docs\/css\/_hue_section.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/sass\/_secondary.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/docs\/css\/_secondary.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/sass\/_sl_section.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/docs\/css\/_sl_section.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/sass\/_typography.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/docs\/css\/_typography.css",
@@ -77,17 +129,17 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/sass\/styles.sass": {
+	"\/sass\/main.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
-		"ft": 2,
+		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/docs\/styles.css",
 		"oF": 2,
-		"oS": 3,
+		"oS": 1,
 		"uL": 1
 		},
 	"\/scripts.js": {

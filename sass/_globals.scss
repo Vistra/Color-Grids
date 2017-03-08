@@ -1,0 +1,117 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: #fff;
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.page-wrap {
+  width: 100%;
+  max-width: 75rem;
+  margin: 6rem auto 12rem auto;
+  min-height: calc(100vh - 8rem);
+}
+
+#primary {
+  padding: 0 1rem;
+}
+
+.section-container {
+  margin: 0 auto 4rem auto;
+}
+
+.card {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin: auto .5rem;
+  position: relative;
+}
+
+.card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-bottom: 3px;
+  padding: 3px 0px;
+  height: 4.5rem;
+}
+
+input.divider {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  border: none;
+  width: 100%;
+}
+
+h2.header-item {
+  line-height: 4rem;
+  padding: .2rem 1rem;
+}
+
+.card-bottom {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  height: 24rem;
+}
+
+.selected {
+  box-shadow: inset 0px 0px 0px 5px #FFF;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.close-card {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 2.5rem;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 4rem;
+  flex: 0 1 4rem;
+  line-height: 1;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-transition: .1s ease-in;
+    transition: .1s ease-in;
+  }
+  &:active {
+    -webkit-transform: scale(0.875);
+    transform: scale(0.875);
+    -webkit-transition: .1s ease-in;
+    transition: .1s ease-in;
+  }
+}
+
+#secondary .swatch-container:after,
+#primary .card:after {
+  box-shadow: 0px 6px 100px 0px rgba(0, 0, 0, 0.75);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}

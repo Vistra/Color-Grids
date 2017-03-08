@@ -2,18 +2,6 @@
 
 var hueNumber = document.getElementById('hue-divider');
 
-init();
-
-function init() {
-  loadHues();
-  var hueInputValue = document.getElementById('hue-input-value')
-  hueInputValue.innerHTML = hueNumber.value;
-  hueNumber.addEventListener("input", function() {
-    hueInputValue.innerHTML = hueNumber.value;
-    loadHues()
-  });
-}
-
 function loadHues() {
   if (parseInt(hueNumber.value) <= parseInt(hueNumber.max)) {
     removeElements("hue-container");
@@ -27,6 +15,19 @@ function loadHues() {
   }
 }
 
+function init() {
+  loadHues();
+  var hueInputValue = document.getElementById('hue-input-value');
+  hueInputValue.innerHTML = hueNumber.value;
+  hueNumber.addEventListener("input", function() {
+    hueInputValue.innerHTML = hueNumber.value;
+    loadHues();
+  });
+}
+
+init();
+
+
 function removeElements(className) {
   var elements = document.getElementsByClassName(className);
   while (elements.length > 0) {
@@ -35,9 +36,6 @@ function removeElements(className) {
 }
 
 function addHues(hueDivider, i) {
-  if (i > 32) {
-    var blah = '';
-  }
   var hueContainer = document.createElement("div");
   hueContainer.classList.add("hue-container");
 
@@ -240,7 +238,7 @@ function slSelect() {
   }
 }
 
-function toggleClass(selection) {
+function toggleClass() {
   var selectedSl = this;
   if (this.classList.contains("selected")) {
     this.classList.remove("selected");
