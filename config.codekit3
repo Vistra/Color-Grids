@@ -12,13 +12,7 @@
 	"\/.gitignore": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/build\/.gitignore",
-		"oF": 0
-		},
-	"\/build\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/docs\/build\/.gitignore",
+		"oAP": "\/docs\/.gitignore",
 		"oF": 0
 		},
 	"\/docs": {
@@ -27,10 +21,16 @@
 		"oAP": "\/docs\/docs",
 		"oF": 0
 		},
+	"\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/docs\/index.html",
+		"oF": 0
+		},
 	"\/palettes.afdesign": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/build\/palettes.afdesign",
+		"oAP": "\/docs\/palettes.afdesign",
 		"oF": 0
 		},
 	"\/README.md": {
@@ -42,7 +42,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/build\/README.html",
+		"oAP": "\/docs\/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -50,6 +50,28 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/sass\/styles.sass": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/docs\/styles.css",
+		"oF": 2,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/scripts.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/docs\/scripts.js",
+		"oF": 2,
+		"sC": 1,
+		"tS": 0
 		}
 	},
 "hooks": [
@@ -1776,7 +1798,7 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0,
+		"autoOutputPathStyle": 2,
 		"createSourceMap": 0,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
@@ -1819,9 +1841,9 @@
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 2,
+		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
-		"minifyOutput": 1,
+		"minifyOutput": 0,
 		"syntaxCheckerStyle": 1,
 		"transpilerStyle": 0
 		},
@@ -1926,7 +1948,7 @@
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
-		"outputStyle": 0,
+		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 1
@@ -1991,7 +2013,7 @@
 		],
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
-	"sourceFolderName": "source",
+	"sourceFolderName": "Color Grids",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
@@ -2160,7 +2182,7 @@
 			}
 		},
 	"uglifyReservedNamesString": "$",
-	"websiteRelativeRoot": "\/build"
+	"websiteRelativeRoot": "\/docs"
 	},
 "settingsFileVersion": "3"
 }
