@@ -1,12 +1,11 @@
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
   font-family: "Roboto", Helvetica, sans-serif;
   color: #fff;
   background-color: rgb(26, 26, 26);
-  font-size: .875rem;
   box-sizing: border-box;
   margin: 0;
 }
@@ -360,7 +359,7 @@ SATURATION & LIGHTNESS SECTION
 
 .s-title-data,
 .l-title-data {
-  flex: 0 0 5.5rem;
+  flex: 0 0 6rem;
   margin-right: 1rem;
 }
 
@@ -450,12 +449,15 @@ SECONDARY
   height: 40%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   #secondary {
     justify-content: space-between;
   }
   #secondary .swatch-container {
     flex: 0 1 calc(50% - 1rem);
+  }
+  html {
+    font-size: 11px;
   }
 }
 
@@ -539,11 +541,9 @@ FOOTER
   color: rgba(255, 255, 255, 0.5);
 }
 
-@media screen and (max-width: 90000px) {
-  #footer-flex {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 1.5rem 2rem 1.5rem;
-  }
+#footer-flex {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1.5rem 2rem 1.5rem;
 }
