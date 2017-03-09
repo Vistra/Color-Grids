@@ -207,7 +207,7 @@ function fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId)
 
   function addLightnessRows() {
     newSLTable.innerHTML = "";
-    for (var l = 0; l < parseInt(lightnessInput.value); l++) {;
+    for (var l = 0; l < parseInt(lightnessInput.value); l++) {
       var lightnessRow = document.createElement("tr");
       newSLTable.appendChild(lightnessRow, newSLTable);
       var lightnessValue = 100 - ((l + 1) * (100 / (parseInt(lightnessInput.value) + 1)));
@@ -308,17 +308,12 @@ function deleteCard() {
 
 function deselectById(closeButtonTargetId) {
   if (closeButtonTargetId.includes("sl-card")) {
-    var deselectByIdId = closeButtonTargetId.replace("sl-card-", "");
+    deselectByIdId = closeButtonTargetId.replace("sl-card-", "");
   } else if (closeButtonTargetId.includes("-p")) {
     deselectByIdId = closeButtonTargetId.replace("-p", "");
   } else {
     return;
   }
-
-  var deselectedElement = document.getElementById(deselectByIdId);
-  if (deselectedElement == document.getElementById(deselectByIdId)) {
-    deselectedElement.classList.remove("selected");
-  } else { return; }
 }
 
 //Function to convert rgb color to hex format
@@ -336,11 +331,9 @@ function rgb2hex(rgb) {
 //Function to convert rgb color to hsl format
 function rgb2hsl(rgb) {
   rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-  var r = rgb[1];
-  var g = rgb[2];
-  var b = rgb[3];
-
-  r /= 255, g /= 255, b /= 255;
+  var r = rgb[1] / 255;
+  var g = rgb[2] / 255;
+  var b = rgb[3] / 255;
 
   var max = Math.max(r, g, b),
     min = Math.min(r, g, b);
@@ -366,3 +359,35 @@ function rgb2hsl(rgb) {
   }
   return "hsl(" + Math.round(h * 360) + ", " + Math.round(100 * s) + "%, " + Math.round(100 * l) + "%)";
 }
+
+// randomize button
+function randomizeButton() {
+  var randomizeButtonById = document.getElementById("randomize");
+  randomizeButtonById.addEventListener("click", function() {
+    var hues = document.getElementsByClassName("hue");
+    removeElements("sl-card");
+    loadHues();
+    for (var i = 0; i < 4; i++) {
+      var randomHueElement = hues[getRandomIntInclusive(0, hues.length - 1)];
+      console.log(randomHueElement);
+      var randomSaturation = getRandomIntInclusive(1, 100);
+      var randomLightness = getRandomIntInclusive(50, 100);
+      var randomHsl = "hsl(" + randomHueElement.id + ", " + "100%" + ", " + "80%" + " )";
+      randomizeButtonById.style.color = randomHsl;
+      randomizeButtonById.style.borderColor = randomHsl;
+      hueSelection.call(randomHueElement);
+    }
+  });
+}
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+randomizeButton();
+
+setInterval(function() {
+  // Code Here
+}, 5000);

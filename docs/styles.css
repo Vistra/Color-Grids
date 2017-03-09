@@ -124,6 +124,10 @@ h2.header-item {
 /**************************
  *TYPOGRAPHY
  **************************/
+/**********************
+*VARIABLES
+**********************/
+/**********************/
 h1,
 h2,
 h3,
@@ -167,6 +171,7 @@ a {
   color: inherit;
   text-decoration: none;
   text-transform: none;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 input {
@@ -278,6 +283,15 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
   -ms-flex: 0 0 2.5rem;
   flex: 0 0 2.5rem;
   text-align: left;
+}
+
+#randomize {
+  color: rgba(255, 255, 255, 0.42);
+  margin-left: auto;
+  margin-right: 1rem;
+  padding: .2rem .5rem;
+  border: 2px solid rgba(255, 255, 255, 0.42);
+  border-radius: 2px;
 }
 
 .hue-card .card-bottom {
