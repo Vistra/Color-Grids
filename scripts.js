@@ -365,11 +365,14 @@ function randomizeButton() {
   var randomizeButtonById = document.getElementById("randomize");
   randomizeButtonById.addEventListener("click", function() {
     var hues = document.getElementsByClassName("hue");
+    var randomArray = getRandomArray(0, 15);
+    //console.log(randomArray);
     removeElements("sl-card");
     loadHues();
     for (var i = 0; i < 4; i++) {
-      var randomHueElement = hues[getRandomIntInclusive(0, hues.length - 1)];
-      console.log(randomHueElement);
+      var randomHueElement = hues[randomArray[i]];
+      var randomArrayNumerate = randomArray[i];
+      //console.log(randomArrayNumerate);
       var randomSaturation = getRandomIntInclusive(1, 100);
       var randomLightness = getRandomIntInclusive(50, 100);
       var randomHsl = "hsl(" + randomHueElement.id + ", " + "100%" + ", " + "80%" + " )";
@@ -378,6 +381,13 @@ function randomizeButton() {
       hueSelection.call(randomHueElement);
     }
   });
+}
+
+function getRandomArray(min, max) {
+  var a = [];
+  while (max >= min) a.push(max--)
+  a.sort(function() { return .5 - Math.random() });
+  return a;
 }
 
 function getRandomIntInclusive(min, max) {
