@@ -1,3 +1,13 @@
+/**********************
+*VARIABLES
+**********************/
+
+$header-color: rgba(255, 255, 255, 0.8);
+$thumb-color: rgba(255, 255, 255, 0.5);
+$thumb-height: 1.6rem;
+
+/**********************/
+
 h1,
 h2,
 h3,
@@ -7,7 +17,7 @@ h6 {
   font-weight: normal;
   margin: 0;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.8);
+  color: $header-color;
 }
 
 h1 {
@@ -41,6 +51,7 @@ a {
   color: inherit;
   text-decoration: none;
   text-transform: none;
+  color: $header-color;
 }
 
 input {
@@ -64,10 +75,10 @@ input {
     &::-webkit-slider-thumb {
       box-shadow: none;
       border: none;
-      height: 1.6rem;
+      height: $thumb-height;
       width: 1rem;
       border-radius: 1px;
-      background: rgba(255, 255, 255, 0.5);
+      background: $thumb-color;
       cursor: pointer;
       -webkit-appearance: none;
       margin-top: 2.2px;
@@ -87,10 +98,10 @@ input {
     &::-moz-range-thumb {
       box-shadow: none;
       border: none;
-      height: 1.6rem;
+      height: $thumb-height;
       width: 1rem;
       border-radius: 0px;
-      background: rgba(255, 255, 255, 0.5);
+      background: $thumb-color;
       cursor: pointer;
     }
     &::-ms-track {
@@ -111,10 +122,10 @@ input {
     &::-ms-thumb {
       box-shadow: none;
       border: none;
-      height: 1.6rem;
+      height: $thumb-height;
       width: 1rem;
       border-radius: 0px;
-      background: rgba(255, 255, 255, 0.5);
+      background: $thumb-color;
       cursor: pointer;
     }
     &:focus {
