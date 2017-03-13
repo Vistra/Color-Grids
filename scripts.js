@@ -218,9 +218,11 @@ function fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId)
       function addSaturationColumns() {
         for (var s = 0; s < parseInt(saturationInput.value); s++) {
           var sl = document.createElement("td");
+          var saturationValue = ((s + 1) * (100 / parseInt(saturationInput.value)));
           sl.classList.add("sl");
           sl.setAttribute("id", selectedHueId + "-" + saturationValue + "-" + lightnessValue);
-          var saturationValue = ((s + 1) * (100 / parseInt(saturationInput.value)));
+          console.log(saturationValue);
+
           lightnessRow.appendChild(sl, lightnessRow);
           sl.style.backgroundColor = "hsl(" + selectedHueId + "," + saturationValue + "%" + "," + lightnessValue + "%" + ")";
         }
@@ -372,15 +374,22 @@ function randomizeButton() {
   var defaultColor = randomizeButtonById.style.color;
   randomizeButtonById.addEventListener("click", function() {
     var hues = document.getElementsByClassName("hue");
-    var randomArray = getRandomArray(0, hues.length - 1);
+    var randomHueArray = getRandomArray(0, hues.length - 1);
     //console.log(randomArray);
+    removeElements("swatch-container");
     removeElements("sl-card");
     loadHues();
-    for (var i = 0; i < 4; i++) {
-      var randomHueElement = hues[randomArray[i]];
-      var randomArrayNumerate = randomArray[i];
+    for (var i = 0; i < 2; i++) {
+      var randomHueElement = hues[randomHueArray[i]];
+      var randomArrayNumerate = randomHueArray[i];
       //console.log(randomArrayNumerate);
       hueSelection.call(randomHueElement);
+    }
+    var allSlElements = document.getElementsByClassName("sl");
+    var randomSlArray = getRandomArray(0, allSlElements.length - 1);
+    for (var i = 0; i < 5; i++) {
+      var randomSlElement = allSlElements[randomSlArray[i]];
+      toggleClass.call(randomSlElement);
     }
   });
 
@@ -395,7 +404,6 @@ function randomizeButton() {
 
   randomizeButtonById.addEventListener("mouseenter", randomButtonMouseEvents);
   randomizeButtonById.addEventListener("mousedown", randomButtonMouseEvents);
-
   randomizeButtonById.addEventListener("mouseleave", function() {
     randomizeButtonById.style.color = defaultColor;
     randomizeButtonById.style.borderColor = defaultColor;
