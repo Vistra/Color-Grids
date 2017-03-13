@@ -126,12 +126,11 @@ function createSLCards(selectedHue) {
 
   var saturationInput = document.createElement("input");
   saturationInput.setAttribute("type", "range");
-  saturationInput.setAttribute("value", "4");
   saturationInput.setAttribute("min", "1");
   saturationInput.setAttribute("max", "12");
+  saturationInput.setAttribute("value", getRandomIntInclusive(saturationInput.min, saturationInput.max));
   saturationInput.setAttribute("size", "2");
-  saturationInput.setAttribute("id", "saturation-input");
-  saturationInput.classList.add("header-item", "divider");
+  saturationInput.classList.add("header-item", "divider", "saturation-input");
   saturationInputValue.innerHTML = saturationInput.value;
   saturationInput.addEventListener("input", function() {
     saturationInputValue.innerHTML = saturationInput.value;
@@ -139,12 +138,11 @@ function createSLCards(selectedHue) {
 
   var lightnessInput = document.createElement("input");
   lightnessInput.setAttribute("type", "range");
-  lightnessInput.setAttribute("value", "4");
   lightnessInput.setAttribute("min", "1");
   lightnessInput.setAttribute("max", "12");
+  lightnessInput.setAttribute("value", getRandomIntInclusive(lightnessInput.min, lightnessInput.max));
   lightnessInput.setAttribute("size", "2");
-  lightnessInput.setAttribute("id", "lightness-input");
-  lightnessInput.classList.add("header-item", "divider");
+  lightnessInput.classList.add("header-item", "divider", "lightness-input");
   lightnessInputValue.innerHTML = lightnessInput.value;
   lightnessInput.addEventListener("input", function() {
     lightnessInputValue.innerHTML = lightnessInput.value;
@@ -221,8 +219,6 @@ function fillSLTable(newSLTable, saturationInput, lightnessInput, selectedHueId)
           var saturationValue = ((s + 1) * (100 / parseInt(saturationInput.value)));
           sl.classList.add("sl");
           sl.setAttribute("id", selectedHueId + "-" + saturationValue + "-" + lightnessValue);
-          console.log(saturationValue);
-
           lightnessRow.appendChild(sl, lightnessRow);
           sl.style.backgroundColor = "hsl(" + selectedHueId + "," + saturationValue + "%" + "," + lightnessValue + "%" + ")";
         }
@@ -375,20 +371,17 @@ function randomizeButton() {
   randomizeButtonById.addEventListener("click", function() {
     var hues = document.getElementsByClassName("hue");
     var randomHueArray = getRandomArray(0, hues.length - 1);
-    //console.log(randomArray);
     removeElements("swatch-container");
     removeElements("sl-card");
     loadHues();
-    for (var i = 0; i < 2; i++) {
-      var randomHueElement = hues[randomHueArray[i]];
-      var randomArrayNumerate = randomHueArray[i];
-      //console.log(randomArrayNumerate);
+    for (var x = 0; x < 2; x++) {
+      var randomHueElement = hues[randomHueArray[x]];
       hueSelection.call(randomHueElement);
     }
     var allSlElements = document.getElementsByClassName("sl");
     var randomSlArray = getRandomArray(0, allSlElements.length - 1);
-    for (var i = 0; i < 5; i++) {
-      var randomSlElement = allSlElements[randomSlArray[i]];
+    for (var y = 0; y < 5 && y < allSlElements.length; y++) {
+      var randomSlElement = allSlElements[randomSlArray[y]];
       toggleClass.call(randomSlElement);
     }
   });

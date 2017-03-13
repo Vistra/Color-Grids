@@ -36,26 +36,3 @@
     }
   }
 }
-
-@media screen and (max-width: 600px) {
-  #secondary {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    .swatch-container {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(50% - 1rem);
-      flex: 0 1 calc(50% - 1rem);
-    }
-  }
-  html {
-    font-size: 11px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .sl-card {
-    -ms-flex-preferred-size: calc(50% - 1rem);
-    flex-basis: calc(50% - 1rem);
-  }
-}
