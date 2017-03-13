@@ -365,7 +365,7 @@ function randomizeButton() {
   var randomizeButtonById = document.getElementById("randomize");
   randomizeButtonById.addEventListener("click", function() {
     var hues = document.getElementsByClassName("hue");
-    var randomArray = getRandomArray(0, 15);
+    var randomArray = getRandomArray(0, hues.length - 1);
     //console.log(randomArray);
     removeElements("sl-card");
     loadHues();
