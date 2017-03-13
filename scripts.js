@@ -302,7 +302,6 @@ function deleteCard() {
   var closeButtonTarget = this.parentElement.parentElement;
   var closeButtonTargetId = closeButtonTarget.id;
   closeButtonTarget.parentNode.removeChild(closeButtonTarget);
-  closeButtonTarget.style.display = "none";
   deselectById(closeButtonTargetId);
 }
 
@@ -311,6 +310,13 @@ function deselectById(closeButtonTargetId) {
     deselectByIdId = closeButtonTargetId.replace("sl-card-", "");
   } else if (closeButtonTargetId.includes("-p")) {
     deselectByIdId = closeButtonTargetId.replace("-p", "");
+  } else {
+    return;
+  }
+  var theElement = document.getElementById(deselectByIdId);
+  if (theElement && theElement.classList.contains("selected")) {
+    theElement.classList.remove("selected");
+
   } else {
     return;
   }
@@ -363,6 +369,7 @@ function rgb2hsl(rgb) {
 // randomize button
 function randomizeButton() {
   var randomizeButtonById = document.getElementById("randomize");
+  var defaultColor = randomizeButtonById.style.color;
   randomizeButtonById.addEventListener("click", function() {
     var hues = document.getElementsByClassName("hue");
     var randomArray = getRandomArray(0, hues.length - 1);
@@ -373,13 +380,25 @@ function randomizeButton() {
       var randomHueElement = hues[randomArray[i]];
       var randomArrayNumerate = randomArray[i];
       //console.log(randomArrayNumerate);
-      var randomSaturation = getRandomIntInclusive(1, 100);
-      var randomLightness = getRandomIntInclusive(50, 100);
-      var randomHsl = "hsl(" + randomHueElement.id + ", " + "100%" + ", " + "80%" + " )";
-      randomizeButtonById.style.color = randomHsl;
-      randomizeButtonById.style.borderColor = randomHsl;
       hueSelection.call(randomHueElement);
     }
+  });
+
+  function randomButtonMouseEvents() {
+    var randomHue = getRandomIntInclusive(1, 360);
+    var randomSaturation = getRandomIntInclusive(1, 100);
+    var randomLightness = getRandomIntInclusive(50, 100);
+    var randomHsl = "hsl(" + randomHue + ", " + "100%" + ", " + "80%" + " )";
+    randomizeButtonById.style.color = randomHsl;
+    randomizeButtonById.style.borderColor = randomHsl;
+  }
+
+  randomizeButtonById.addEventListener("mouseenter", randomButtonMouseEvents);
+  randomizeButtonById.addEventListener("mousedown", randomButtonMouseEvents);
+
+  randomizeButtonById.addEventListener("mouseleave", function() {
+    randomizeButtonById.style.color = defaultColor;
+    randomizeButtonById.style.borderColor = defaultColor;
   });
 }
 
