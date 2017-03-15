@@ -2,12 +2,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 1s;
-  transition: 1s;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0 1rem;
-  margin-top: -1rem;
+  margin-top: $vertical-unit2;
   .swatch-container {
     background: rgba(255, 255, 255, 0.05);
     height: 17rem;

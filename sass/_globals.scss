@@ -13,7 +13,7 @@ body {
 .page-wrap {
   width: 100%;
   max-width: 75rem;
-  margin: calc(1rem + 4%) auto 12rem auto;
+  margin: $vertical-unit auto 12rem auto;
   min-height: calc(100vh - 8rem);
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 .section-container {
-  margin: 0 auto 4rem auto;
+  margin: 0 auto $vertical-unit2 auto;
 }
 
 .card {
