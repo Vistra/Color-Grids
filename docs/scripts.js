@@ -1,6 +1,7 @@
 //Add hue-containers
 
 var hueNumber = document.getElementById("hue-divider");
+hueNumber.value = getRandomIntInclusive(hueNumber.min, hueNumber.max);
 
 init();
 
@@ -22,8 +23,20 @@ function loadHues() {
       addHues(hueDivider, i);
     }
   } else {
-    hueNumber.value = 32;
+    hueNumber.value = hueNumber.max;
     loadHues();
+  }
+}
+
+function loadRandomHues() {
+  hueNumber.value = getRandomIntInclusive(hueNumber.min, hueNumber.max);
+  var hueInputValue = document.getElementById("hue-input-value");
+  hueInputValue.innerHTML = hueNumber.value;
+
+  removeElements("hue-container");
+  for (var i = 0; i < hueNumber.value; i++) {
+    var hueDivider = 360 / (parseInt(hueNumber.value));
+    addHues(hueDivider, i);
   }
 }
 
@@ -369,11 +382,11 @@ function randomizeButton() {
   var randomizeButtonById = document.getElementById("randomize");
   var defaultColor = randomizeButtonById.style.color;
   randomizeButtonById.addEventListener("click", function() {
+    loadRandomHues();
     var hues = document.getElementsByClassName("hue");
     var randomHueArray = getRandomArray(0, hues.length - 1);
     removeElements("swatch-container");
     removeElements("sl-card");
-    loadHues();
     for (var x = 0; x < 2; x++) {
       var randomHueElement = hues[randomHueArray[x]];
       hueSelection.call(randomHueElement);
