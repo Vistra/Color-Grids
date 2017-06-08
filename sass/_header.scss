@@ -1,105 +1,99 @@
 #header {
-  background-color: #262626;
-  padding: 2rem;
-  overflow: hidden;
+    background-color: #262626;
+    padding: 2rem;
+    overflow: hidden;
 }
 
 #header-content-wrap {
-  max-width: 72.5rem;
-  margin: auto;
+    max-width: 72.5rem;
+    margin: auto;
 }
 
 #top-bar {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 #help {
-  color: $link-color;
-  //font-weight: bold;
-  cursor: pointer;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-<<<<<<< HEAD
-
-  &:hover {
-    color: $link-hover;
-  }
-
-=======
-  &:hover {
-    color: $link-hover;
-  }
->>>>>>> parent of 789ce21... bedtime
-  &:active {
-    color: $link-hover;
-  }
+    color: $link-color;
+    //font-weight: bold;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:hover {
+        color: $link-hover;
+    }
+    &:hover {
+        color: $link-hover;
+    }
+    &:active {
+        color: $link-hover;
+    }
 }
 
 #logo a {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 #logo-1 {
-  color: HSL(0, 80%, 66%);
+    color: HSL(0, 80%, 66%);
 }
 
 #logo-2 {
-  color: HSL(36, 80%, 66%);
+    color: HSL(36, 80%, 66%);
 }
 
 #logo-3 {
-  color: HSL(72, 80%, 66%);
+    color: HSL(72, 80%, 66%);
 }
 
 #logo-4 {
-  color: HSL(108, 80%, 66%);
+    color: HSL(108, 80%, 66%);
 }
 
 #logo-5 {
-  color: HSL(144, 80%, 66%);
+    color: HSL(144, 80%, 66%);
 }
 
 #logo-6,
 #logo-7 {
-  color: HSL(180, 80%, 66%);
+    color: HSL(180, 80%, 66%);
 }
 
 #logo-8 {
-  color: HSL(216, 80%, 66%);
+    color: HSL(216, 80%, 66%);
 }
 
 #logo-9 {
-  color: HSL(252, 80%, 66%);
+    color: HSL(252, 80%, 66%);
 }
 
 #logo-10 {
-  color: HSL(288, 80%, 66%);
+    color: HSL(288, 80%, 66%);
 }
 
 #logo-11 {
-  color: HSL(324, 80%, 66%);
+    color: HSL(324, 80%, 66%);
 }
 
 .intro {
-  color: rgba(255, 255, 255, .75);
-  font-size: 1.5rem;
-  max-width: 54.375rem;
-  transition: 0.4s ease-in-out;
-  position: relative;
-  top: 3rem;
-  opacity: 0;
-  max-height: 0;
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+    max-width: 54.375rem;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    top: 3rem;
+    opacity: 0;
+    max-height: 0;
 }
 
 .show {
-  opacity: 1 !important;
-  padding-bottom: 4rem;
-<<<<<<< HEAD
+    opacity: 1 !important;
+    padding-bottom: 4rem;
 }
-=======
+
+
 }
->>>>>>> parent of 789ce21... bedtime

@@ -1,35 +1,26 @@
 #footer {
-  position: absolute;
-  padding: 2rem;
-  overflow: hidden;
-  right: 0;
-  bottom: 0;
-  left: 0;
-<<<<<<< HEAD
-=======
-  padding: 1r
->>>>>>> parent of 789ce21... bedtime
+    position: absolute;
+    padding: 2rem;
+    overflow: hidden;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 #footer-content-wrap {
-  max-width: 72.5rem;
-  margin: auto;
-  text-align: right;
+    max-width: 72.5rem;
+    margin: auto;
+    text-align: right;
 }
 
 #signature a {
-<<<<<<< HEAD
-  font-weight: 400;
-  color: $link-color;
-
-  &:hover {
-    color: $link-hover;
-  }
+    font-weight: 400;
+    color: $link-color;
+    &:hover {
+        color: $link-hover;
+    }
+    color: $link-color;
+    &:hover {
+        color: $link-hover;
+    }
 }
-=======
-  color: $link-color;
-  &:hover {
-    color: $link-hover;
-  }
-}
->>>>>>> parent of 789ce21... bedtime
