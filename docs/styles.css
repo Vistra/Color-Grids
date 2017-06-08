@@ -205,6 +205,8 @@ a {
 
 p {
   font-weight: lighter;
+  margin: 0;
+  padding-bottom: 1em;
 }
 
 input {
@@ -543,7 +545,7 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 #header {
   background-color: #262626;
   padding: 2rem;
-  position: aboslute;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
@@ -558,18 +560,29 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-#signature {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+#help {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-#signature a {
-  color: rgba(255, 255, 255, 0.5);
+#help:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#help:active {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 #logo a {
@@ -617,12 +630,23 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
   color: HSL(324, 80%, 66%);
 }
 
-#intro {
+.intro {
   color: rgba(255, 255, 255, 0.75);
-  margin-top: 4rem;
   font-size: 1.5rem;
   max-width: 54.375rem;
-  padding-bottom: 2rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: relative;
+  top: 3rem;
+  opacity: 0;
+  max-height: 0;
+}
+
+.show {
+  opacity: 1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  padding-bottom: 4rem;
 }
 
 /*************************

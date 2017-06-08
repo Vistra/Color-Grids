@@ -1,8 +1,7 @@
 #header {
   background-color: #262626;
   padding: 2rem;
-  //height: 20rem;
-  position: aboslute;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
@@ -15,13 +14,22 @@
 
 #top-bar {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
 }
 
-#signature {
-  align-self: flex-end;
-  a {
-      color: rgba(255, 255, 255, 0.5);
+#help {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.75);
   }
 }
 
@@ -70,10 +78,19 @@
   color: HSL(324, 80%, 66%);
 }
 
-#intro {
+.intro {
   color: rgba(255, 255, 255, .75);
-  margin-top: 4rem;
   font-size: 1.5rem;
   max-width: 54.375rem;
-  padding-bottom: 2rem;
+  transition: 1s;
+  position: relative;
+  top: 3rem;
+  opacity: 0;
+  max-height: 0;
+}
+
+.show {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  padding-bottom: 4rem;
 }

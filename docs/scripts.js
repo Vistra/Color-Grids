@@ -4,8 +4,28 @@ var hueNumber = document.getElementById("hue-divider");
 hueNumber.value = getRandomIntInclusive(hueNumber.min, hueNumber.max);
 
 init();
+showHelp();
+
+function showHelp() {
+  var header = document.getElementById('intro');
+  var h = header.scrollHeight;
+  header.setAttribute("style", "max-height: 0rem;");
+  document.getElementById('help').onclick = function() {
+    header.classList.toggle("show");
+    console.log(header);
+    console.log(h);
+    if (header.classList.contains('show')) {
+      header.setAttribute("style", "max-height: " + h + "px;");
+    } else {
+      header.setAttribute("style", "max-height: 0rem;");
+    }
+  };
+}
 
 function init() {
+  document.getElementById('help').onclick = function() {
+    document.getElementById('header').classList.toggle('show');
+  };
   loadHues();
   var hueInputValue = document.getElementById("hue-input-value");
   hueInputValue.innerHTML = hueNumber.value;
@@ -434,4 +454,3 @@ randomizeButton();
 setInterval(function() {
   // Code Here
 }, 5000);
-
