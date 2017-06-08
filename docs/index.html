@@ -1,71 +1,72 @@
 <!DOCTYPE HTML>
 <html>
 
-  <head>
+<head>
     <title>ColorGrids</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="header" class="header">
-      <div id="header-content-wrap">
-        <div id="top-bar">
-          <h3 id="logo">
-            <a href="http://colorgrids.com">
-                <span id="logo-1">#</span>
-                <span id="logo-2">C</span>
-                <span id="logo-3">o</span>
-                <span id="logo-4">l</span>
-                <span id="logo-5">o</span>
-                <span id="logo-6">r</span>
-                <span id="logo-7">G</span>
-                <span id="logo-8">r</span>
-                <span id="logo-9">i</span>
-                <span id="logo-10">d</span>
-                <span id="logo-11">s</span>
-            </a>
-          </h3>
-          <h5 id="help">About</h5>
+        <div id="header-content-wrap">
+            <div id="top-bar">
+                <h3 id="logo">
+                    <a href="http://colorgrids.com">
+                        <span id="logo-1">#</span>
+                        <span id="logo-2">C</span>
+                        <span id="logo-3">o</span>
+                        <span id="logo-4">l</span>
+                        <span id="logo-5">o</span>
+                        <span id="logo-6">r</span>
+                        <span id="logo-7">G</span>
+                        <span id="logo-8">r</span>
+                        <span id="logo-9">i</span>
+                        <span id="logo-10">d</span>
+                        <span id="logo-11">s</span>
+                    </a>
+                </h3>
+                <h5 id="help">About</h5>
+            </div>
+            <div id="intro" class="intro">
+                <p>ColorGrids is an HSL based color selection tool aimed at helping designers experiment with, and create interesting color combinations. ColorGrids makes it easy to select colors that are mathematically related to each other within the HSL
+                    colorspace.
+                </p>
+                <p> Use the sliders below to define your grids, then start selecting colors.</p>
+                <p>Or try hitting <span class="caps">randomize</span> to roll the dice for a new color palette.</p>
+            </div>
         </div>
-        <div id="intro" class="intro">
-          <p>ColorGrids is an HSL based color selection tool aimed at helping designers experiment with, and create interesting color combinations. ColorGrids makes it easy to select colors that are mathematically related to each other within the HSL colorspace.
-          </p>
-          <p> Use the sliders below to define your grids, then start selecting colors.</p>
-          <p>Or try hitting <span class="caps">randomize</span> to roll the dice for a new color palette.</p>
-        </div>
-      </div>
     </div>
     <div class="page-wrap">
 
-      <div id="primary" class="tray">
-        <section class="hue-section section-container">
-          <section class="hue-card card">
-            <div class="card-top">
-              <h2 class="header-item">Hue</h2>
-              <input type="range" value="16" min="3" max="32" size="2" id="hue-divider" class="header-item divider">
-              <h5 id="hue-input-value"></h5>
-              <h6 id="randomize">RANDOMIZE</h6>
-            </div>
-            <div id="hue-card-bottom" class="card-bottom"></div>
-          </section>
-        </section>
-        <section id="sl-section" class="sl-section section-container"></section>
-      </div>
-      <!--#primary -->
+        <div id="primary" class="tray">
+            <section class="hue-section section-container">
+                <section class="hue-card card">
+                    <div class="card-top">
+                        <h2 class="header-item">Hue</h2>
+                        <input type="range" value="16" min="3" max="32" size="2" id="hue-divider" class="header-item divider">
+                        <h5 id="hue-input-value"></h5>
+                        <h6 id="randomize">RANDOMIZE</h6>
+                    </div>
+                    <div id="hue-card-bottom" class="card-bottom"></div>
+                </section>
+            </section>
+            <section id="sl-section" class="sl-section section-container"></section>
+        </div>
+        <!--#primary -->
 
-      <div id="secondary" class "tray"></div>
+        <div id="secondary" class "tray"></div>
     </div>
     <!--.page-wrap -->
     <div id="footer">
-      <div id="footer-content-wrap">
-        <h5 id="signature"><a href="http://travismiller.design">by <span class="bold">Travis Miller</a></span>
+        <div id="footer-content-wrap">
+            <h5 id="signature"><a href="http://travismiller.design">by <span class="bold">Travis Miller</a></span>
             </h5>
-      </div>
-      <script type="text/javascript" src="scripts.js"></script>
-  </body>
+        </div>
+        <script type="text/javascript" src="scripts.js"></script>
+</body>
 
 </html>
