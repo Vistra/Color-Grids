@@ -300,7 +300,8 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 }
 
 .caps {
-  font-size: 92.5%;
+  font-size: 90%;
+  opacity: .8;
   font-weight: bold;
   text-transform: uppercase;
 }
