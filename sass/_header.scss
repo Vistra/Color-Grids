@@ -23,11 +23,17 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+<<<<<<< HEAD
 
   &:hover {
     color: $link-hover;
   }
 
+=======
+  &:hover {
+    color: $link-hover;
+  }
+>>>>>>> parent of 789ce21... bedtime
   &:active {
     color: $link-hover;
   }
@@ -92,4 +98,8 @@
 .show {
   opacity: 1 !important;
   padding-bottom: 4rem;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> parent of 789ce21... bedtime

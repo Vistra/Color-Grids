@@ -29,12 +29,6 @@
 		"oAP": "\/docs\/docs",
 		"oF": 0
 		},
-	"\/index.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/docs\/index.html",
-		"oF": 0
-		},
 	"\/palettes.afdesign": {
 		"ft": 8192,
 		"oA": 2,
@@ -72,45 +66,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/sass\/_footer.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/docs\/css\/_footer.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/_globals.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/docs\/css\/_globals.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/_header.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/docs\/css\/_header.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/sass\/_hue_section.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -124,19 +79,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/sass\/_secondary.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/docs\/css\/_secondary.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/sass\/_sl_section.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -146,32 +88,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/docs\/css\/_sl_section.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/_typography.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/docs\/css\/_typography.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/_variables.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/docs\/css\/_variables.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1

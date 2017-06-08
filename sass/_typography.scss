@@ -35,8 +35,13 @@ h6 {
   line-height: 1.6;
 }
 
+<<<<<<< HEAD
 a,
 p {
+=======
+p,
+a {
+>>>>>>> parent of 789ce21... bedtime
   font-size: 1em;
   color: inherit;
   text-decoration: none;
@@ -52,11 +57,15 @@ p {
 
 input {
   font-size: 1.5em;
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 789ce21... bedtime
   &[type=range] {
     -webkit-appearance: none;
     width: 100%;
     margin: 0;
+<<<<<<< HEAD
 
     &:focus {
       outline: none;
@@ -141,16 +150,102 @@ input {
         background: none;
       }
     }
+=======
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 1.9rem;
+      cursor: pointer;
+      box-shadow: none;
+      background: none;
+      border-radius: 0px;
+      border: 0px solid #010101;
+    }
+    &::-webkit-slider-thumb {
+      box-shadow: none;
+      border: none;
+      height: $thumb-height;
+      width: 1rem;
+      border-radius: 1px;
+      background: $thumb-color;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: 2.2px;
+    }
+    &:focus::-webkit-slider-runnable-track {
+      background: none;
+    }
+    &::-moz-range-track {
+      width: 100%;
+      height: 2rem;
+      cursor: pointer;
+      box-shadow: none;
+      background: none;
+      border-radius: 0px;
+      border: 0px solid #010101;
+    }
+    &::-moz-range-thumb {
+      box-shadow: none;
+      border: none;
+      height: $thumb-height;
+      width: 1rem;
+      border-radius: 0px;
+      background: $thumb-color;
+      cursor: pointer;
+    }
+    &::-ms-track {
+      width: 100%;
+      height: 1rem;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+    &::-ms-fill-lower,
+    &::-ms-fill-upper {
+      background: none;
+      border: 0px solid #010101;
+      border-radius: 0px;
+      box-shadow: none;
+    }
+    &::-ms-thumb {
+      box-shadow: none;
+      border: none;
+      height: $thumb-height;
+      width: 1rem;
+      border-radius: 0px;
+      background: $thumb-color;
+      cursor: pointer;
+    }
+    &:focus {
+      &::-ms-fill-lower,
+      &::-ms-fill-upper {
+        background: none;
+      }
+    }
+>>>>>>> parent of 789ce21... bedtime
   }
 }
 
 .caps {
   font-size: 90%;
+<<<<<<< HEAD
   opacity: 0.8;
   font-weight: 700;
+=======
+  opacity: .8;
+  font-weight: bold;
+>>>>>>> parent of 789ce21... bedtime
   text-transform: uppercase;
 }
 
 .bold {
+<<<<<<< HEAD
   font-weight: 700;
 }
+=======
+  font-weight: bold;
+}
+>>>>>>> parent of 789ce21... bedtime
