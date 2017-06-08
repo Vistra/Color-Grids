@@ -98,6 +98,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/sass\/_header.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/docs\/css\/_header.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/sass\/_hue_section.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -2130,7 +2143,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
-	"previewPathAddition": "asdf",
+	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "Color Grids",
 	"uglifyDefinesString": "",

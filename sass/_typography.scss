@@ -41,7 +41,11 @@ a {
   color: inherit;
   text-decoration: none;
   text-transform: none;
-  color: $header-color;
+  color: $body-color;
+}
+
+p {
+  font-weight: lighter;
 }
 
 input {
@@ -125,4 +129,14 @@ input {
       }
     }
   }
+}
+
+.caps {
+  font-size: 92.5%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
 }

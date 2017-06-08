@@ -9,8 +9,37 @@
 </head>
 
 <body>
-  <div id="header"></div>
+  <div id="header">
+    <div id="header-content-wrap">
+      <div id="top-bar">
+        <h3 id="logo">
+          <a href="http://colorgrids.com">
+            <span id="logo-1">#</span>
+            <span id="logo-2">C</span>
+            <span id="logo-3">o</span>
+            <span id="logo-4">l</span>
+            <span id="logo-5">o</span>
+            <span id="logo-6">r</span>
+            <span id="logo-7">G</span>
+            <span id="logo-8">r</span>
+            <span id="logo-9">i</span>
+            <span id="logo-10">d</span>
+            <span id="logo-11">s</span>
+          </a>
+        </h3>
+        <h5 id="signature"><a href="http://travismiller.design">by <span class="bold">Travis Miller</a></span>
+        </h5>
+      </div>
+      <div id="intro">
+        <p>ColorGrids is an HSL based color selection tool aimed at helping designers experiment with, and create interesting color combinations. ColorGrids makes it easy to select colors that are mathematically related to each other within the HSL colorspace.
+        </p>
+        <p> Use the sliders below to define your grids, then start selecting colors.</p>
+        <p>Or try hitting <span class="caps">randomize</span> to roll the dice for a new color palette.</p>
+      </div>
+    </div>
+  </div>
   <div class="page-wrap">
+
     <div id="primary" class="tray">
       <section class="hue-section section-container">
         <section class="hue-card card">
@@ -18,6 +47,7 @@
             <h2 class="header-item">Hue</h2>
             <input type="range" value="16" min="3" max="32" size="2" id="hue-divider" class="header-item divider">
             <h5 id="hue-input-value"></h5>
+            <h6 id="randomize">RANDOMIZE</h6>
           </div>
           <div id="hue-card-bottom" class="card-bottom"></div>
         </section>
@@ -31,22 +61,6 @@
   <!--.page-wrap -->
   <div id="footer">
     <div id="footer-content-wrap">
-      <h3 id="Logo">
-        <a href="#">
-          <span id="logo-1">#</span>
-          <span id="logo-2">C</span>
-          <span id="logo-3">o</span>
-          <span id="logo-4">l</span>
-          <span id="logo-5">o</span>
-          <span id="logo-6">r</span>
-          <span id="logo-7">G</span>
-          <span id="logo-8">r</span>
-          <span id="logo-9">i</span>
-          <span id="logo-10">d</span>
-          <span id="logo-11">s</span>
-        </a>
-      </h3>
-      <h5 id="signature"><a href="#">Travis Miller Design</a></h5>
     </div>
     <script type="text/javascript" src="scripts.js"></script>
 </body>

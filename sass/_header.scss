@@ -1,0 +1,79 @@
+#header {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  //height: 20rem;
+  position: aboslute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#header-content-wrap {
+  max-width: 72.5rem;
+  margin: auto;
+}
+
+#top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#signature {
+  align-self: flex-end;
+  a {
+      color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+#logo a {
+  font-size: 3rem;
+}
+
+#logo-1 {
+  color: HSL(0, 80%, 66%);
+}
+
+#logo-2 {
+  color: HSL(36, 80%, 66%);
+}
+
+#logo-3 {
+  color: HSL(72, 80%, 66%);
+}
+
+#logo-4 {
+  color: HSL(108, 80%, 66%);
+}
+
+#logo-5 {
+  color: HSL(144, 80%, 66%);
+}
+
+#logo-6,
+#logo-7 {
+  color: HSL(180, 80%, 66%);
+}
+
+#logo-8 {
+  color: HSL(216, 80%, 66%);
+}
+
+#logo-9 {
+  color: HSL(252, 80%, 66%);
+}
+
+#logo-10 {
+  color: HSL(288, 80%, 66%);
+}
+
+#logo-11 {
+  color: HSL(324, 80%, 66%);
+}
+
+#intro {
+  color: rgba(255, 255, 255, .75);
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  max-width: 54.375rem;
+  padding-bottom: 2rem;
+}
