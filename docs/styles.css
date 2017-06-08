@@ -32,7 +32,7 @@ body {
 }
 
 .section-container {
-  margin: 0 auto calc((3rem + 2vw)*(1/4)) auto;
+  margin: 0 auto calc((4rem + 2vw)*(1/4)) auto;
 }
 
 .card {
@@ -305,12 +305,12 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 .caps {
   font-size: 90%;
   opacity: .8;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /*************************
@@ -473,7 +473,7 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 }
 
 .sl-card {
-  margin-bottom: calc((3rem + 2vw)*(1/4));
+  margin-bottom: calc((4rem + 2vw)*(1/4));
   -webkit-box-flex: 0;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
@@ -658,7 +658,6 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1r;
 }
 
 #footer-content-wrap {
@@ -668,6 +667,7 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 }
 
 #signature a {
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
 
