@@ -541,7 +541,7 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 *HEADER
 **************************/
 #header {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #262626;
   padding: 2rem;
   position: aboslute;
   top: 0;
@@ -662,7 +662,7 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
     font-size: 10px;
   }
   #logo a {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
