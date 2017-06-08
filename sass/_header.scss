@@ -2,9 +2,6 @@
   background-color: #262626;
   padding: 2rem;
   overflow: hidden;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 #header-content-wrap {
@@ -19,17 +16,18 @@
 }
 
 #help {
-  color: rgba(255, 255, 255, 0.5);
+  color: $link-color;
+  //font-weight: bold;
   cursor: pointer;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
   &:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: $link-hover;
   }
   &:active {
-    color: rgba(255, 255, 255, 0.75);
+    color: $link-hover;
   }
 }
 
@@ -82,7 +80,7 @@
   color: rgba(255, 255, 255, .75);
   font-size: 1.5rem;
   max-width: 54.375rem;
-  transition: 1s;
+  transition: 0.4s ease-in-out;
   position: relative;
   top: 3rem;
   opacity: 0;
@@ -90,7 +88,6 @@
 }
 
 .show {
-  opacity: 1;
-  transition: 0.5s ease-in-out;
+  opacity: 1 !important;
   padding-bottom: 4rem;
 }

@@ -6,6 +6,7 @@
 **************************/
 html {
   font-size: 11px;
+  height: 100%;
 }
 
 body {
@@ -14,14 +15,16 @@ body {
   background-color: #1a1a1a;
   box-sizing: border-box;
   margin: 0;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 4rem;
 }
 
 .page-wrap {
-  position: relative;
-  top: 4rem;
   width: 100%;
   max-width: 75rem;
-  margin: 0 auto 12rem auto;
+  margin: 0 auto;
+  padding: 4rem 0 16rem 0;
 }
 
 #primary {
@@ -547,9 +550,6 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
   background-color: #262626;
   padding: 2rem;
   overflow: hidden;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 #header-content-wrap {
@@ -579,11 +579,11 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 }
 
 #help:hover {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #help:active {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #logo a {
@@ -635,8 +635,8 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.5rem;
   max-width: 54.375rem;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   position: relative;
   top: 3rem;
   opacity: 0;
@@ -644,9 +644,7 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 }
 
 .show {
-  opacity: 1;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  opacity: 1 !important;
   padding-bottom: 4rem;
 }
 
@@ -654,19 +652,27 @@ input[type=range]:focus::-ms-fill-lower, input[type=range]:focus::-ms-fill-upper
 *FOOTER
 **************************/
 #footer {
-  width: 100%;
-}
-
-#footer h3,
-#footer h4 {
-  line-height: 3rem;
+  position: absolute;
+  padding: 2rem;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1r;
 }
 
 #footer-content-wrap {
-  max-width: 75rem;
+  max-width: 72.5rem;
   margin: auto;
-  text-align: center;
-  padding: 2rem 0;
+  text-align: right;
+}
+
+#signature a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#signature a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /*************************
