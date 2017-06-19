@@ -66,8 +66,12 @@ input.divider {
   width: 100%;
   .header-item {
     line-height: 4rem;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0;
   }
+}
+
+h2.header-item {
+  margin: 0 0.75rem;
 }
 
 .card-bottom {
