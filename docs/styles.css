@@ -264,7 +264,6 @@ body {
   max-width: 75rem;
   margin: 0 auto;
   padding: 4rem 0 16rem;
-  padding: 4rem 0 16rem 0;
 }
 
 #primary {
@@ -273,7 +272,6 @@ body {
 
 .section-container {
   margin: 0 auto calc((3rem + 2vw)*(1/4));
-  margin: 0 auto calc((3rem + 2vw)*(1/4)) auto;
 }
 
 .card {
@@ -281,7 +279,6 @@ body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: auto 0.5rem;
-  margin: auto .5rem;
   position: relative;
 }
 
@@ -299,7 +296,7 @@ body {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   margin-bottom: 3px;
-  padding: 3px .5rem;
+  padding: 3px 1rem;
   height: 4.5rem;
 }
 
@@ -317,7 +314,7 @@ input.divider .header-item {
 }
 
 h2.header-item {
-  margin: 0 0.5rem;
+  margin-right: 1rem;
 }
 
 .card-bottom {
@@ -332,8 +329,6 @@ h2.header-item {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   box-shadow: inset 0px 0px 0px 5px #FFF;
-  -webkit-transition: .2s;
-  transition: .2s;
 }
 
 .close-card {
@@ -363,21 +358,11 @@ h2.header-item {
   transform: scale(0.875);
   -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
-  -webkit-transition: .1s ease-in;
-  transition: .1s ease-in;
-}
-
-.close-card:active {
-  -webkit-transform: scale(0.875);
-  transform: scale(0.875);
-  -webkit-transition: .1s ease-in;
-  transition: .1s ease-in;
 }
 
 #randomize {
   color: rgba(255, 255, 255, 0.42);
   margin-left: auto;
-  margin-right: 1rem;
   padding: 0.2rem 0.5rem;
   padding: .2rem .5rem;
   border: 2px solid rgba(255, 255, 255, 0.42);
@@ -643,7 +628,6 @@ h2.header-item {
 
 .close-card {
   float: right;
-  padding: 0 8px;
   color: white;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
