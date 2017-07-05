@@ -7,7 +7,7 @@
 		"uuidString": "8CB3A317-2FCA-4749-B8CC-FC82D54A0332"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25849",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -94,6 +94,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/docs\/css\/_globals.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/sass\/_header.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/docs\/css\/_header.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -2130,6 +2143,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "Color Grids",

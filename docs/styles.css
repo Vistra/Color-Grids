@@ -326,7 +326,6 @@ h2.header-item {
 
 .selected {
   box-shadow: inset 0 0 0 5px #FFF;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   box-shadow: inset 0px 0px 0px 5px #FFF;
 }
@@ -349,14 +348,12 @@ h2.header-item {
   cursor: pointer;
   -webkit-transform: scale(1.25);
   transform: scale(1.25);
-  -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
 
 .close-card:active {
   -webkit-transform: scale(0.875);
   transform: scale(0.875);
-  -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
 
@@ -378,21 +375,18 @@ h2.header-item {
   cursor: pointer;
   -webkit-transform: scale(1.03);
   transform: scale(1.02);
-  -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
 
 #randomize:active {
   -webkit-transform: scale(0.95);
   transform: scale(0.95);
-  -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
 
 #primary .card:after,
 #secondary .swatch-container:after {
   box-shadow: 0 0.5rem 8rem 0 rgba(0, 0, 0, 0.75);
-  -webkit-transition: .1s ease-in;
   transition: .1s ease-in;
 }
 
@@ -400,7 +394,6 @@ h2.header-item {
 #secondary .swatch-container:after:active {
   -webkit-transform: scale(0.95);
   transform: scale(0.95);
-  -webkit-transition: .1s ease-in;
   transition: .1s ease-in;
 }
 
@@ -494,7 +487,6 @@ h2.header-item {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 0.5rem;
   flex: 1 0 0.5rem;
-  -webkit-transition: 0.33s;
   transition: 0.33s;
 }
 
@@ -597,10 +589,13 @@ h2.header-item {
   overflow: hidden;
   word-break: normal;
   background: #eaeaea;
-  -webkit-transition: 0.33s;
   transition: 0.33s;
   box-sizing: content-box;
   cursor: pointer;
+}
+
+.sl-card .close-card {
+  margin-right: -1rem;
 }
 
 /*************************
@@ -637,6 +632,10 @@ h2.header-item {
   border-top-right-radius: 4px;
   background: cyan;
   height: 60%;
+}
+
+.final-color-wrap .close-card {
+  margin: auto .5rem;
 }
 
 .final-color-meta {
@@ -741,7 +740,6 @@ h2.header-item {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.5rem;
   max-width: 54.375rem;
-  -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   position: relative;
   top: 3rem;
